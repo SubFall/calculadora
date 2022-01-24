@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="exterior">
+            <input id="resultado" type="text" placeholder="0" disabled>
+            <br>
+            <button onclick="caracterAcao('acao', 'c')" class="botao_g">C</button>
+            <button onclick="caracterAcao('acao', '/')" class="botao_m">/</button>
+            <button onclick="caracterAcao('acao', '*')" class="botao_m">X</button>
+
+            <br>
+
+            <button onclick="caracterAcao('valor', 7)" class="botao_m">7</button>
+            <button onclick="caracterAcao('valor', 8)" class="botao_m">8</button>
+            <button onclick="caracterAcao('valor', 9)" class="botao_m">9</button>
+            <button onclick="caracterAcao('acao', '-')" class="botao_m">-</button>
+
+            <br>
+
+            <button onclick="caracterAcao('valor', 4)" class="botao_m">4</button>
+            <button onclick="caracterAcao('valor', 5)" class="botao_m">5</button>
+            <button onclick="caracterAcao('valor', 6)" class="botao_m">6</button>
+            <button onclick="caracterAcao('acao', '+')" class="botao_m">+</button>
+
+            <br>
+
+            <button onclick="caracterAcao('valor', 1)" class="botao_m">1</button>
+            <button onclick="caracterAcao('valor', 2)" class="botao_m">2</button>
+            <button onclick="caracterAcao('valor', 3)" class="botao_m">3</button>
+            
+
+            <br>
+            
+            <button onclick="caracterAcao('valor', 0)" class="botao_g">0</button>
+            <button onclick="caracterAcao('acao', '.')" class="botao_m">.</button>
+            <button onclick="caracterAcao('acao', '=')" class="botao_igual">=</button>
+            
+        </div>
+
+        <script>
+            function caracterAcao(tipo, valor) {
+               
+                if(tipo ===  'acao') {
+
+                    if(valor === 'c') {
+                        
+                        document.getElementById('resultado').value = ''
+
+                    } else if (valor === '/' || valor === '*' || valor === '-' || valor === '+' || valor === '.') {
+                        document.getElementById('resultado').value += valor
+
+                    } else if (valor === '=') {
+                        let resultado = eval(document.getElementById('resultado').value)
+                        
+                        document.getElementById('resultado').value = resultado
+               
+                    }
+
+                } else if(tipo === 'valor') {
+                  document.getElementById('resultado').value += valor 
+                }
+                
+            }
+        </script>
+    </body>
+</html>

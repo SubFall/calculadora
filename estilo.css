@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.exterior {
+    border: 1px solid #000;
+    border-radius: 15px;
+    background: #1C1C1C;
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 15px;
+}
+.botao_g {
+    width: 132px;
+    height: 50px;
+    font-size: 30px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+}
+
+.botao_m {
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+}
+
+.botao_igual {
+    width: 60px;
+    height: 108px;
+    font-size: 30px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+    margin-top: -100px;
+    margin-bottom: -10px;
+    position: relative;
+    top: -28px;
+}
+
+
+
+.botao_g:hover, .botao_igual:hover, .botao_m:hover {
+    background: #A9A9A9;
+}
+
+input {
+    width: 280px;
+    height: 50px;
+    font-size: 30px;
+    margin: 10px 3px;
+}
+
+input[type=text] {
+    text-align: right;
+    padding: 0 6px 0 0;
+  }
